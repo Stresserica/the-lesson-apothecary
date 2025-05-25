@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Lesson Apothecary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Spectral&family=Gloock&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #181411;
+      color: #f4eadc;
+      font-family: 'Spectral', serif;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      margin: 0;
+    }
+    a {
+      color: #d7c2a4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: linear-gradient(to right, #322b28, #1e1a18);
+      border-bottom: 2px solid #a68a64;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 6rem 1rem 4rem 1rem;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      background: url('https://designergpt.replit.app/pages/file-d9c9cfe7-a30e-4906-a2cb-c9479468e861.png') center/200px no-repeat;
+      opacity: 0.08;
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      z-index: 0;
+    }
+    h1, blockquote, .author, .menu-toggle {
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 2.5rem;
+      color: #e4d1b9;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+    }
+    blockquote {
+      font-family: 'Gloock', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: #d7c2a4;
+      max-width: 700px;
+      margin: 0 auto 0.3rem auto;
+    }
+    .author {
+      font-size: 0.85rem;
+      color: #bda98a;
+      font-style: italic;
+      margin-top: 0;
+    }
+    .menu-toggle {
+      display: block;
+      margin: 1.5rem auto 2rem auto;
+      background: #4e3a2e;
+      color: #f4eadc;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Cinzel Decorative', cursive;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .category-box {
+      background: linear-gradient(145deg, #2c2520, #1c1816);
+      border: 2px solid #6f5945;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      text-align: center;
+      transition: transform 0.2s;
+      cursor: pointer;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .category-box:hover {
+      transform: scale(1.02);
+    }
+    .category-box h3 {
+      font-family: 'Cinzel Decorative', cursive;
+      color: #f2e3c6;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .category-box p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Lesson Apothecary</h1>
+    <blockquote>“Let me live, love, and say it well in good sentences.”</blockquote>
+    <p class="author">— Sylvia Plath</p>
+    <button class="menu-toggle">Menu</button>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <div class="category-box"><h3>English</h3><p>Literature, analysis, and expression</p></div>
+      <div class="category-box"><h3>German</h3><p>Grammar, conversation, and culture</p></div>
+      <div class="category-box"><h3>Italian</h3><p>Language, music, and literature</p></div>
+      <div class="category-box"><h3>Linguistics</h3><p>Phonetics, syntax, and etymology</p></div>
+      <div class="category-box"><h3>Digital Tools</h3><p>Useful platforms and resources</p></div>
+      <div class="category-box"><h3>Practice Tests</h3><p>Assessments and challenges</p></div>
+      <div class="category-box"><h3>Watch & Read</h3><p>Films, shows, and books</p></div>
+      <div class="category-box"><h3>Vocabulary</h3><p>Lists and interactive quizzes</p></div>
+      <div class="category-box"><h3>Curriculum</h3><p>Swedish grading and course plans</p></div>
+      <div class="category-box"><h3>About Me</h3><p>Who I am and why I created this</p></div>
+    </div>
+  </main>
+</body>
+</html>

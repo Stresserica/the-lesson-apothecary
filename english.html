@@ -26,18 +26,9 @@
       position: relative;
     }
 
-    header::before {
-      content: "";
-      background: url('https://stresserica.github.io/the-lesson-apothecary/logo.png') center/180px no-repeat;
-      opacity: 0.06;
-      position: absolute;
-      top: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 180px;
-      height: 180px;
-      z-index: 0;
-    }
+   header::before {
+  display: none;
+}
 
     h1 {
       font-family: 'Cinzel Decorative', cursive;
@@ -92,6 +83,16 @@
       color: #f4eadc;
       font-family: 'Cinzel Decorative', cursive;
       margin-bottom: 1rem;
+
+      .add-button {
+    background-color: #6b4e3d;
+    color: #f4eadc;
+    border: 1px solid #a68a64;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .add-button:hover {
+    background-color: #8a6550;
     }
   </style>
 </head>
@@ -102,13 +103,13 @@
 </header>
 
 <main>
-  <button class="new-toggle" onclick="toggleForm()">+ New</button>
+  <button class="new-toggle" onclick="toggleForm()">New</button>
 
   <form id="newPostForm" class="new-post-form" onsubmit="addPost(event)">
     <input type="text" id="postTitle" placeholder="Post Title" required />
     <textarea id="postBody" placeholder="Post Description" required></textarea>
     <input type="text" id="postLink" placeholder="Link to file/resource (optional)" />
-    <button type="submit">Add Post</button>
+    <button type="submit" class="add-button">Add Post</button>
   </form>
 
   <section id="postsSection">

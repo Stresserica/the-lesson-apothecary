@@ -56,3 +56,86 @@
     a:hover {
       text-decoration: underline;
     }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: #1e1a17;
+      color: #cbbca1;
+    }
+    .new-post-form {
+      display: none;
+      margin-top: 2rem;
+    }
+    .post {
+      border-left: 4px solid #a68a64;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    button.new-toggle {
+      background: #4e3a2e;
+      color: #f4eadc;
+      font-family: 'Cinzel Decorative', cursive;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>English</h1>
+</header>
+
+<main>
+  <button class="new-toggle" onclick="toggleForm()">+ New</button>
+
+  <form id="newPostForm" class="new-post-form" onsubmit="addPost(event)">
+    <input type="text" id="postTitle" placeholder="Post Title" required />
+    <textarea id="postBody" placeholder="Post Description" required></textarea>
+    <input type="text" id="postLink" placeholder="Link to file/resource (optional)" />
+    <button type="submit">Add Post</button>
+  </form>
+
+  <section id="postsSection">
+    <h2>📘 English Resources</h2>
+    <!-- New posts will appear here -->
+  </section>
+
+  <p><a href="index.html">← Back to Homepage</a></p>
+</main>
+
+<footer>
+  &copy; 2025 The Lesson Apothecary
+</footer>
+
+<script>
+  function toggleForm() {
+    const form = document.getElementById('newPostForm');
+    form.style.display = form.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function addPost(event) {
+    event.preventDefault();
+
+    const title = document.getElementById('postTitle').value.trim();
+    const body = document.getElementById('postBody').value.trim();
+    const link = document.getElementById('postLink').value.trim();
+
+    const section = document.getElementById('postsSection');
+    const div = document.createElement('div');
+    div.className = 'post';
+    div.innerHTML = `
+      <h3>${title}</h3>
+      <p>${body}</p>
+      ${link ? `<p><a href="${link}" target="_blank">📎 View Resource</a></p>` : ''}
+    `;
+    section.appendChild(div);
+
+    // Reset form
+    document.getElementById('newPostForm').reset();
+    document.getElementById('newPostForm').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

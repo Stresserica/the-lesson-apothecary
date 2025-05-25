@@ -7,8 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Spectral&family=Gloock&display=swap" rel="stylesheet">
   <style>
-        color-scheme: dark;
-  }
+    :root {
+      color-scheme: dark;
+    }
 
     body {
       background-color: #181411;
@@ -16,6 +17,7 @@
       font-family: 'Spectral', serif;
       background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
     }
+
     header {
       background: linear-gradient(to right, #322b28, #1e1a18);
       border-bottom: 2px solid #a68a64;
@@ -23,6 +25,7 @@
       padding: 4rem 1rem 2rem;
       position: relative;
     }
+
     header::before {
       content: "";
       background: url('logo.png') center/180px no-repeat;
@@ -35,6 +38,7 @@
       height: 180px;
       z-index: 0;
     }
+
     h1 {
       font-family: 'Cinzel Decorative', cursive;
       font-size: 2.2rem;
@@ -42,23 +46,28 @@
       z-index: 1;
       color: #e4d1b9;
     }
+
     main {
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
     }
+
     h2 {
       font-family: 'Cinzel Decorative', cursive;
       color: #f0dbc4;
       margin-top: 2rem;
     }
+
     a {
       color: #d7c2a4;
       font-weight: bold;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       margin-top: 4rem;
@@ -66,15 +75,18 @@
       background-color: #1e1a17;
       color: #cbbca1;
     }
+
     .new-post-form {
       display: none;
       margin-top: 2rem;
     }
+
     .post {
       border-left: 4px solid #a68a64;
       padding-left: 1rem;
       margin-bottom: 1.5rem;
     }
+
     button.new-toggle {
       background: #4e3a2e;
       color: #f4eadc;
@@ -101,7 +113,7 @@
 
   <section id="postsSection">
     <h2>📘 English Resources</h2>
-    <!-- New posts will appear here -->
+    <!-- Posts will appear here -->
   </section>
 
   <p><a href="index.html">← Back to Homepage</a></p>
@@ -134,7 +146,6 @@
     `;
     section.appendChild(div);
 
-    // Reset form
     document.getElementById('newPostForm').reset();
     document.getElementById('newPostForm').style.display = 'none';
   }
